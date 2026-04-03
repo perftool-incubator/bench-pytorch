@@ -2,7 +2,7 @@
 
 Scripts and configuration to run the [PyTorch](https://pytorch.org/) benchmark within the [crucible](https://github.com/perftool-incubator/crucible) performance testing framework.
 
-See `run-pytorch.json` for example usage with `crucible run --from-file run-pytorch.json`.
+See `run-pytorch.json` for example usage with `crucible run run-pytorch.json`.
 
 ## Key Files
 
