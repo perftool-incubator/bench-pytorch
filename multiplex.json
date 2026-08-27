@@ -2,12 +2,12 @@
   "presets": {
   },
   "validations": {
-    "models" : {
-      "description" : "valid models",
-      "args" : [
+    "models": {
+      "description": "valid models",
+      "args": [
         "model"
       ],
-      "vals" : "^BERT_pytorch$|^fastNLP_Bert$|^hf_Bert_large$|^hf_BigBird$|^hf_DistilBert$|^hf_GPT2$|^hf_GPT2_large$|^hf_Longformer$|^hf_Roberta_base$|^hf_Reformer$|^llama$|^llama_v2_7b_16h$|^llava$|^hf_Whisper$|^hf_T5_large$|^hf_T5$|^nanogpt$|^timm_vision_transformer$|^timm_vision_transformer_large$"
+      "vals": "^(BERT_pytorch|fastNLP_Bert|hf_Bert_large|hf_BigBird|hf_DistilBert|hf_GPT2|hf_GPT2_large|hf_Longformer|hf_Roberta_base|hf_Reformer|llama|llama_v2_7b_16h|llava|hf_Whisper|hf_T5_large|hf_T5|nanogpt|timm_vision_transformer|timm_vision_transformer_large)$"
     }
   }
 }
