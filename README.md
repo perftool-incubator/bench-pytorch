@@ -9,7 +9,8 @@ See `run-pytorch.json` for example usage with `crucible run run-pytorch.json`.
 | File | Purpose |
 |------|---------|
 | `rickshaw.json` | Rickshaw integration: defines client scripts and parameter transformations |
-| `multiplex.json` | Parameter validation and presets for multiplex |
+| `multiplex.json` | Parameter validation rules, unit conversions, and presets for multiplex |
+| `benchmark-metadata.json` | Machine-readable description and CDM-indexed source/type list (consumed by `crucible benchmarks list`) |
 | `pytorch-base` | Base setup shared by other scripts |
 | `pytorch-client` | Client-side benchmark execution |
 | `pytorch-get-runtime` | Runtime extraction |
