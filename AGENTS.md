@@ -5,7 +5,7 @@ Scripts and configuration to run the PyTorch benchmark within the crucible frame
 
 ## Language
 - Bash for client execution scripts
-- Python for post-processing (`pytorch-post-process`)
+- Python for post-processing (`pytorch-post-process.py`)
 
 ## Key Files
 | File | Purpose |
@@ -16,7 +16,7 @@ Scripts and configuration to run the PyTorch benchmark within the crucible frame
 | `pytorch-base` | Base setup shared by other scripts |
 | `pytorch-client` | Client-side benchmark execution |
 | `pytorch-get-runtime` | Extracts runtime from command-line options |
-| `pytorch-post-process` | Parses pytorch output into crucible metrics |
+| `pytorch-post-process.py` | Parses pytorch output into crucible metrics |
 | `workshop.json` | Engine image build requirements |
 
 ## Conventions
