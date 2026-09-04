@@ -4,7 +4,7 @@
   },
   "benchmark": "pytorch",
   "controller" : {
-    "post-script" : "%bench-dir%/pytorch-post-process"
+    "post-script" : "%bench-dir%/pytorch-post-process.py"
   },
   "client" : {
     "files-from-controller": [

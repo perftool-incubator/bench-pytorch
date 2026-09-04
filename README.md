@@ -14,5 +14,5 @@ See `run-pytorch.json` for example usage with `crucible run run-pytorch.json`.
 | `pytorch-base` | Base setup shared by other scripts |
 | `pytorch-client` | Client-side benchmark execution |
 | `pytorch-get-runtime` | Runtime extraction |
-| `pytorch-post-process` | Post-processing: parses pytorch output into crucible metrics |
+| `pytorch-post-process.py` | Post-processing: parses pytorch output into crucible metrics |
 | `workshop.json` | Engine image build requirements |

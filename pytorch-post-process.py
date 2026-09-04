@@ -21,8 +21,7 @@ else:
         print("ERROR: <TOOLBOX_HOME>/python ('%s') does not exist!" % (p))
         exit(2)
     sys.path.append(str(p))
-from toolbox.metrics import log_sample
-from toolbox.metrics import finish_samples
+from toolbox.cdm_metrics import CDMMetrics
 
 params = {}
 
@@ -45,6 +44,7 @@ def process_options():
 
 def main():
     process_options()
+    metrics = CDMMetrics()
 
     # The period used to report the official result is the 'measurement' period.
 
@@ -88,17 +88,17 @@ def main():
         desc = {'source' : 'pytorch', 'class': 'count', 'type': 'elapsed-time-milliseconds', 'default-aggregation': 'avg'}
         names = {}
         sample = {'begin': begin, 'end': end, 'value': end - begin}
-        log_sample(file_id, desc, names, sample)
+        metrics.log_sample(file_id, desc, names, sample)
 
         for key in d['metrics'].keys():
             if (re.search("metric=latencies$", key) and re.findall("[0-9]+(?:[.][0-9]+)?", str(d['metrics'][key])) ):
                 desc = {'source' : 'pytorch', 'class': 'latency', 'type': 'latency-milliseconds', 'default-aggregation': 'max'}
                 sample = {'begin': begin, 'end': end, 'value': d['metrics'][key]}
-                log_sample(file_id, desc, names, sample)
+                metrics.log_sample(file_id, desc, names, sample)
             else:
                 print("skipping: " + key)
 
-        metric_file_name = finish_samples()
+        metric_file_name = metrics.finish_samples()
         period['metric-files'].append(metric_file_name)
         iter_sample['periods'].append(period)
         with open('postprocess/post-process-data.json', 'w') as f:
